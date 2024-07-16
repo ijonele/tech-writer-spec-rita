@@ -1,2 +1,2 @@
-# 04. Best Practices
+# Best Practices
 

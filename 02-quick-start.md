@@ -1,4 +1,4 @@
-# 02. Quick Start
+# Quick Start
 
 Follow the steps below to authenticate and run your first API request for **creating a technical writer task**.
 
