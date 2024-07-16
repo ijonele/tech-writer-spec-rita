@@ -1,27 +1,40 @@
 # 02. Quick Start
 
-This guide explains how to get started with the Technical Writer Tasks API using **Postman**.
+Follow the steps below to authenticate and run your first API request for **creating a technical writer task**.
 
-Take the following steps to authenticate and run your first API request for creating a technical writer task:
+This guide uses [Postman](https://web.postman.co) for running requests. Before starting, register there if you don't have an account yet.
 
-1. Visit [our website](), click **Register**, and follow the instructions. You will receive an email containing the **API key** to the address you used for registration. Copy the API key: you'll need it in Step 6.
+## Step 1: Get the API key
 
-2. In Postman, create a new **POST** request.
+1. Visit [our website]().
+2. Click **Register**, and follow the instructions.
+3. You'll receive an email containing the **API key** to the address you used for registration.
+4. Copy the API key: you'll need it in Step 3.
 
-3. Paste the following URL:
+## Step 2: Create a request
+
+1. In [Postman](https://web.postman.co), create a new **POST** request.
+
+2. Paste the following URL:
 
     ```http
     https://api.techwriter.xyz/task
     ```
-4. Navigate to the **Authorization** tab under your request URL. In the **Auth Type** drop-down menu, select **API Key**.
+## Step 3: Authenticate
 
-5. Enter `x-api-key` in the **Key** field.
+1. In the **Authorization** tab under your request URL, select **API Key** from the **Auth Type** drop-down menu.
 
-6. Enter your API key (obtained in Step 1) in the **Value** field.
+2. Enter `x-api-key` in the **Key** field.
 
-7. Make sure that the **Add to** option is set to **Header**.
+3. Enter your API key (obtained in Step 1) in the **Value** field.
 
-8. In the **Body** tab, select **raw** and **JSON** and paste the following:
+4. Make sure that the **Add to** option is set to **Header**.
+
+## Step 3: Add the request body
+
+1. In the **Body** tab, select **raw** and then **JSON**
+
+2. Paste the following:
 
     ```json
     {
@@ -29,7 +42,11 @@ Take the following steps to authenticate and run your first API request for crea
       "component": "API_DOCS"
     }
     ```
-9. Click **SEND** to run the request. The API will return the details of the task you've just created:
+## Step 4: Create your first task
+
+1. Click **SEND** to run the request.
+
+2. The API will return the details of the task you've just created:
 
     ```json
     {
