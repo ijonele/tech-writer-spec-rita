@@ -105,7 +105,7 @@ In the request body, specify the following:
 
 Here is a JS example for running this endpoint:
 
-```
+```js
 const options = {
   method: 'POST',
   headers: {
@@ -132,7 +132,7 @@ fetch('https://api.techwriter.xyz/task', options)
 
 ### Responses
 
-On success, the API will return the details of task you've just created. Note that an ID will be assigned to your task automatically.
+On success, the API will return the details of task you've just created. Note that an ID will be assigned to your task automatically, and the `status` will be `OPEN` by default.
 
 ```json
 {
