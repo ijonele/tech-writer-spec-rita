@@ -34,6 +34,6 @@ Here is an example response returned on success:
 ]
 ```
 
-**Note:** The `status` field represents the status of the task. It can be **open**, **in progress**, **or complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
+**Note:** The `status` field represents the status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
 
 ## POST Add a new task
