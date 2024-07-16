@@ -13,16 +13,22 @@ This endpoint returns details of all technical writer tasks.
 
 ### Authentication
 
-- **Authentication**: Pass the [API key](03-authentication.md) as `X-API-Key` in the request header.
+- Pass the as `X-API-Key` in the request header. Learn more: [Atuthentication](03-authentication.md).
 
 ### Query parameters
 
-- **Query parameters**: Optionally, you can add the following query parameters in any combination to filter the results by status, component (documentation type), and date:
-  - `status`: `OPEN` / `IN_PROGRESS` / `COMPLETED`
-  - `component`: `API_DOCS` / `HELP_CENTER` / `SDK_DOCS` / `OAS_FILE`
-  - `updatedAfter`
+Optionally, you can add the following query parameters in any combination to filter the results:
 
-**Note:** The `status` field represents the status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
+- `status`: `OPEN` / `IN_PROGRESS` / `COMPLETED`  
+  Filters by status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
+
+- `component`: `API_DOCS` / `HELP_CENTER` / `SDK_DOCS` / `OAS_FILE`  
+  Filters by documentation type
+
+- `updatedAfter`
+  Filter tasks that have been updated after a specific date (YYYY-MM-DD)
+
+### Responses
 
 Here is an example response returned on success:
 
@@ -45,8 +51,6 @@ Here is an example response returned on success:
   }
 ]
 ```
-
-**Note:** The `status` field represents the status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
 
 If your request is unauthorized or the API key is missing or invalid, the API will return a 401 error:
 
