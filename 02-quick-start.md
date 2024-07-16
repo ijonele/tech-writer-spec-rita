@@ -10,9 +10,9 @@ Take the following steps to authenticate and run your first API request for crea
 
 3. Paste the following URL:
 
-```http
-https://api.techwriter.xyz/task
-```
+    ```http
+    https://api.techwriter.xyz/task
+    ```
 4. Navigate to the **Authorization** tab under your request URL. In the **Auth Type** drop-down menu, select **API Key**.
 
 5. Enter `x-api-key` in the **Key** field.
@@ -23,24 +23,24 @@ https://api.techwriter.xyz/task
 
 8. In the **Body** tab, select **raw** and **JSON** and paste the following:
 
-```json
-{
-  "title": "My First Task",
-  "component": "API_DOCS"
-}
-```
+    ```json
+    {
+      "title": "My First Task",
+      "component": "API_DOCS"
+    }
+    ```
 9. Click **SEND** to run the request. The API will return the details of the task you've just created:
 
-```json
-{
-  "task_id": "1",
-  "title": "My First Task",
-  "description": "",
-  "status": "OPEN",
-  "component": "API_DOCS",
-  "connected_tasks": []
-}
-```
+    ```json
+    {
+      "task_id": "1",
+      "title": "My First Task",
+      "description": "",
+      "status": "OPEN",
+      "component": "API_DOCS",
+      "connected_tasks": []
+    }
+    ```
 ## What's next?
 
 - Learn more about the [available endpoints](04-endpoints.md).
