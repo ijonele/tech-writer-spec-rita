@@ -9,17 +9,31 @@ https://api.techwriter.xyz/task/tasks
 ```
 This endpoint returns details of all technical writer tasks. Optionally, you can filter them using query parameters.
 
-- **API spec**: [GET List tasks](06-open-api-spec.yaml#getTasks)
 - **Authentication**: Pass the [API key](03-authentication.md) as `X-API-Key` in the request header.
 - **Query parameters**: Optionally, you can add the following filters as query parameters
 
+Here is an example response returned on success:
 
-A short description
-HTTP method and URI
-Required headers, including authentication
-Request body structure (for POST) - note that it is missing from the specification file so you can use your imagination and experience here 🙂
-Success and error response examples
-Status codes explanation
-Python or JS code examples - how to authenticate and make a request only to the POST endpoint
+```json
+[
+  {
+    "task_id": "2",
+    "title": "API Quick Start",
+    "description": "Create a quick start guide for the Technical Writer Tasks API.",
+    "status": "OPEN",
+    "component": "API_DOCS",
+    "connected_tasks": [
+      {
+        "task_id": "1",
+        "title": "Update the API Spec",
+        "description": "Identify gaps in the Technical Writer Tasks API Specification and update it.",
+        "status": "OPEN"
+      }
+    ]
+  }
+]
+```
+
+**Note:** The `status` field represents the status of the task. It can be **open**, **in progress**, **or complete**. In the current version, you can update the task status manually using our website. Later will add an endpoint allowing to update tasks including their statuses.
 
 ## POST Add a new task
