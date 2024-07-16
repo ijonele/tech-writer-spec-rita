@@ -138,7 +138,7 @@ paths:
   /task:
     post:
       summary: Add a new task
-      description: This endpoint adds a new technical writer task. In the request body, specify the title and component (other parameters are optional). The task ID will be assigned automatically and returned in the response.
+      description: This endpoint adds a new technical writer task. In the request body, specify the title and component (other parameters are optional). An ID will be assigned to your task automatically and returned in the response.
       operationId: addTask
       requestBody:
         content:

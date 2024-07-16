@@ -132,7 +132,7 @@ fetch('https://api.techwriter.xyz/task', options)
 
 ### Responses
 
-On success, the API will return the details of task you've just created:
+On success, the API will return the details of task you've just created. Note that an ID will be assigned to your task automatically.
 
 ```json
 {
