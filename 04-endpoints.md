@@ -4,16 +4,25 @@
 
 ## GET List tasks
 
+### URL and description
+
 ```
 https://api.techwriter.xyz/task/tasks
 ```
 This endpoint returns details of all technical writer tasks.
 
+### Authentication
+
 - **Authentication**: Pass the [API key](03-authentication.md) as `X-API-Key` in the request header.
+
+### Query parameters
+
 - **Query parameters**: Optionally, you can add the following query parameters in any combination to filter the results by status, component (documentation type), and date:
   - `status`: `OPEN` / `IN_PROGRESS` / `COMPLETED`
   - `component`: `API_DOCS` / `HELP_CENTER` / `SDK_DOCS` / `OAS_FILE`
   - `updatedAfter`
+
+**Note:** The `status` field represents the status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
 
 Here is an example response returned on success:
 
@@ -41,11 +50,11 @@ Here is an example response returned on success:
 
 If your request is unauthorized or the API key is missing or invalid, the API will return a 401 error:
 
-    ```json
-    {
-      "message": "Unauthorized, API key missing or invalid.",
-      "code": "401"
-    }
-    ```
+```json
+{
+ "message": "Unauthorized, API key missing or invalid.",
+ "code": "401"
+}
+```
 
 ## POST Add a new task
