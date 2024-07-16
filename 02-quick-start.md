@@ -17,7 +17,7 @@ This guide uses [Postman](https://web.postman.co) for running requests. Before s
 
 2. Paste the following URL:
 
-    ```http
+    ```
     https://api.techwriter.xyz/task
     ```
 ## Step 3: Authenticate

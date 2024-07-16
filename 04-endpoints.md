@@ -4,7 +4,7 @@
 
 ## GET List tasks
 
-```cmd
+```
 https://api.techwriter.xyz/task/tasks
 ```
 This endpoint returns details of all technical writer tasks.
