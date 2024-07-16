@@ -98,7 +98,7 @@ paths:
   /tasks:
     get:
       summary: List tasks
-      description: This endpoint returns details of all technical writer tasks.
+      description: This endpoint returns details of all technical writer tasks. Optionally, you can filter them using query parameters.
       operationId: getTasks
       parameters:
         - name: status
@@ -138,7 +138,7 @@ paths:
   /task:
     post:
       summary: Add a new task
-      description: 'This endpoint adds a new technical writer task. In the request body, specify the title and component (other parameters are optional). The task ID will be assigned automatically and returned in the response.'
+      description: This endpoint adds a new technical writer task. In the request body, specify the title and component (other parameters are optional). The task ID will be assigned automatically and returned in the response.
       operationId: addTask
       requestBody:
         content:
