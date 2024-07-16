@@ -2,7 +2,6 @@ openapi: 3.0.0
 info:
   title: Technical Writer Tasks API
   description: 'This API allows managing technical writer tasks. To get started, visit the [Technical Writer Tasks API documentation](01-introduction.md).'
-
   version: 1.0.0
 servers:
   - url: https://api.techwriter.xyz
