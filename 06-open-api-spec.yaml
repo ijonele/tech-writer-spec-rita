@@ -103,19 +103,19 @@ paths:
       parameters:
         - name: status
           in: query
-          description: Filter tasks by status.
+          description: Filter tasks by status
           required: false
           schema:
             $ref: '#/components/schemas/StatusEnum'
         - name: component
           in: query
-          description: Filter tasks by component.
+          description: Filter tasks by component
           required: false
           schema:
             $ref: '#/components/schemas/ComponentEnum'
         - name: updatedAfter
           in: query
-          description: Filter tasks that have been updated after a specific date (YYYY-MM-DD).
+          description: Filter tasks that have been updated after a specific date (YYYY-MM-DD)
           required: false
           schema:
             type: string

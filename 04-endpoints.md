@@ -10,7 +10,10 @@ https://api.techwriter.xyz/task/tasks
 This endpoint returns details of all technical writer tasks.
 
 - **Authentication**: Pass the [API key](03-authentication.md) as `X-API-Key` in the request header.
-- **Query parameters**: Optionally, you can add the following filters as query parameters
+- **Query parameters**: Optionally, you can add the following query parameters in any combination to filter the results by status, component (documentation type), and date:
+  - `status`: `OPEN` / `IN_PROGRESS` / `COMPLETED`
+  - `component`: `API_DOCS` / `HELP_CENTER` / `SDK_DOCS` / `OAS_FILE`
+  - `updatedAfter`
 
 Here is an example response returned on success:
 
