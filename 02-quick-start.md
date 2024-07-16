@@ -32,7 +32,7 @@ This guide uses [Postman](https://web.postman.co) for running requests. Before s
 
 ## Step 3: Add the request body
 
-1. In the **Body** tab, select **raw** and then **JSON**
+1. In the **Body** tab, select **raw** and then **JSON**.
 
 2. Paste the following:
 
@@ -61,4 +61,4 @@ This guide uses [Postman](https://web.postman.co) for running requests. Before s
 ## What's next?
 
 - Learn more about the [available endpoints](04-endpoints.md).
-- Visit the API specification: [Technical Writer Tasks API Specification](05-open-api-spec.yaml).
+- Visit the API specification: [Technical Writer Tasks API Specification](06-open-api-spec.yaml).
