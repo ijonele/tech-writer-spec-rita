@@ -23,10 +23,10 @@ Optionally, you can add the following query parameters in any combination to fil
   Filters by status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
 
 - `component`: `API_DOCS` / `HELP_CENTER` / `SDK_DOCS` / `OAS_FILE`  
-  Filters by documentation type
+  Filters by documentation type.
 
-- `updatedAfter`
-  Filter tasks that have been updated after a specific date (YYYY-MM-DD)
+- `updatedAfter`  
+  Filter tasks that have been updated after a specific date (YYYY-MM-DD).
 
 ### Responses
 
