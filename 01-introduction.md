@@ -10,7 +10,7 @@ You can create new tasks and retrieve the details of the existing ones. The API 
 
 The API is available with the following base URL:
 
-```http
+```
 https://api.techwriter.xyz
 ```
 
