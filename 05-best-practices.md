@@ -1,3 +1,2 @@
-# 04. Endpoints
+# 04. Best Practices
 
-XXX

@@ -1,3 +1,2 @@
 # 03. Authentication
 
-XXX
