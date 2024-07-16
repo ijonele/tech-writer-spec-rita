@@ -66,7 +66,7 @@ If your request is unauthorized or the API key is missing or invalid, the API wi
 ### URL and Description
 
 ```
-https://api.techwriter.xyz/task/task
+https://api.techwriter.xyz/task
 ```
 This endpoint returns details of all technical writer tasks.
 
@@ -102,6 +102,33 @@ In the request body, specify the following:
 ```
 
 ### JS Example
+
+Here is a JS example for running this endpoint:
+
+```
+const options = {
+  method: 'POST',
+  headers: {
+    accept: 'application/json',
+    'content-type': 'application/json',
+    'X-API-Key': 'YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+      "title": "Update the API Spec",
+      "description": "Identify gaps in the Technical Writer Tasks API Specification and update it.",
+      "component": "API_DOCS",
+      "connected_tasks": [
+        "1"
+      ]
+  })
+};
+
+
+fetch('https://api.techwriter.xyz/task', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
 
 ### Responses
 
