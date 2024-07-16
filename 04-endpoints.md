@@ -13,7 +13,7 @@ This endpoint returns details of all technical writer tasks.
 
 ### Authentication
 
-To authenticate your request, pass the as `X-API-Key` in the request header. Learn more: [Atuthentication](03-authentication.md).
+To authenticate your request, pass the as `X-API-Key` in the request header. Learn more: [Authentication](03-authentication.md).
 
 ### Query parameters
 
@@ -72,23 +72,23 @@ This endpoint returns details of all technical writer tasks.
 
 ### Authentication
 
-To authenticate your request, pass the as `X-API-Key` in the request header. Learn more: [Atuthentication](03-authentication.md).
+To authenticate your request, pass the as `X-API-Key` in the request header. Learn more: [Authentication](03-authentication.md).
 
 ### Request body
 
 In the request body, specify the following:
 
 - `title`  
-  (Required)The task title.
+  (required) The task title.
 
 - `description`  
-  (Optional) The task description.
+  The task description.
 
 - `component`:  `API_DOCS` / `HELP_CENTER` / `SDK_DOCS` / `OAS_FILE` 
-  (Required) The documentation type to update.
+  (required) The documentation type to update.
 
-- `connnected_tasks`
-  (Optional) An array of connected tasks, identified by ID. To retrieve the ID of the task you wish to connect, use [GET List tasks](#get-list-tasks).
+- `connnected_tasks`  
+  An array of connected tasks, identified by ID. To retrieve the ID of the task you wish to connect, use [GET List tasks](#get-list-tasks).
 
 ```json
 {
