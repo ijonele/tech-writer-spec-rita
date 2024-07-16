@@ -2,9 +2,9 @@
 
 ## Overview
 
-## GET List tasks
+## GET List Tasks
 
-### URL and description
+### URL and Description
 
 ```
 https://api.techwriter.xyz/task/tasks
@@ -15,7 +15,7 @@ This endpoint returns details of all technical writer tasks.
 
 To authenticate your request, pass the as `X-API-Key` in the request header. Learn more: [Authentication](03-authentication.md).
 
-### Query parameters
+### Query Parameters
 
 Optionally, you can add the following query parameters in any combination to filter the results:
 
@@ -61,9 +61,9 @@ If your request is unauthorized or the API key is missing or invalid, the API wi
 }
 ```
 
-## POST Add a new task
+## POST Add a New Task
 
-### URL and description
+### URL and Description
 
 ```
 https://api.techwriter.xyz/task/task
@@ -74,7 +74,7 @@ This endpoint returns details of all technical writer tasks.
 
 To authenticate your request, pass the as `X-API-Key` in the request header. Learn more: [Authentication](03-authentication.md).
 
-### Request body
+### Request Body
 
 In the request body, specify the following:
 
@@ -100,6 +100,8 @@ In the request body, specify the following:
   ]
 }
 ```
+
+### JS Example
 
 ### Responses
 
