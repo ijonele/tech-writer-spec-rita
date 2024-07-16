@@ -17,50 +17,81 @@ components:
       properties:
         task_id:
           type: string
+          description: The task ID
+          example: 2
         title:
           type: string
+          description: The task title
+          example: API Quick Start
         description:
           type: string
+          description: The task description
+          example: Create a quick start guide for the Technical Writer Tasks API.
         status:
           $ref: '#/components/schemas/StatusEnum'
         component:
           $ref: '#/components/schemas/ComponentEnum'
         connected_tasks:
           type: array
+          description: An array of connected tasks
           items:
             $ref: '#/components/schemas/ConnectedTask'
     TaskInput:
       type: object
+      required: [ title, component ]
       properties:
         title:
           type: string
+          description: The task title
+          example: Update the API Spec
         description:
           type: string
-        status:
-          $ref: '#/components/schemas/StatusEnum'
+          description: The task description
+          example: Identify gaps in the Technical Writer Tasks API Specification and update it.
         component:
           $ref: '#/components/schemas/ComponentEnum'
         connected_tasks:
           type: array
+          description: An array of connected tasks
           items:
-            $ref: '#/components/schemas/ConnectedTask'
+            type: string
+            description: The connected task ID. To retrieve the ID of the task you wish to connect, use GET /tasks.
+            example: 1
     ConnectedTask:
       type: object
       properties:
         task_id:
           type: string
+          description: The connected task ID
+          example: 1
         title:
           type: string
+          description: The connected task title
+          example: Update the API Spec
         description:
           type: string
+          description: The connected task description
+          example: Identify gaps in the Technical Writer Tasks API Specification and update it.
         status:
           $ref: '#/components/schemas/StatusEnum'
     StatusEnum:
       type: string
+      description: The status of the task
       enum: [OPEN, IN_PROGRESS, COMPLETED]
     ComponentEnum:
       type: string
+      description: The documentation type to update
       enum: [API_DOCS, HELP_CENTER, SDK_DOCS, OAS_FILE]
+    ErrorResponse:
+      required:
+          - message
+      properties:
+          message:
+              type: string
+              example: Unauthorized, API key missing or invalid.
+          code:
+              type: string
+              example: 401
 security:
   - ApiKeyAuth: []
 paths:
@@ -91,7 +122,7 @@ paths:
             format: date
       responses:
         '200':
-          description: An array of tasks.
+          description: An array of tasks
           content:
             application/json:
               schema:
@@ -99,20 +130,31 @@ paths:
                 items:
                   $ref: '#/components/schemas/Task'
         '401':
-          description: Unauthorized, API key missing or invalid.
+          description: Unauthorized, API key missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
   /task:
     post:
       summary: Add a new task
-      description: This endpoint adds a new technical writer task.
+      description: 'This endpoint adds a new technical writer task. In the request body, specify the title and component (other parameters are optional). The task ID will be assigned automatically and returned in the response.'
       operationId: addTask
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskInput'
       responses:
         '200':
-          description: An array of tasks.
+          description: The new task
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Task'
+                $ref: '#/components/schemas/Task'
         '401':
-          description: Unauthorized, API key missing or invalid.
+          description: Unauthorized, API key missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
