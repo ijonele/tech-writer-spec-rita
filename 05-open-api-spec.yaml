@@ -98,7 +98,7 @@ paths:
   /tasks:
     get:
       summary: List tasks
-      description: This endpoint returns all technical writer tasks.
+      description: This endpoint returns details of all technical writer tasks.
       operationId: getTasks
       parameters:
         - name: status
