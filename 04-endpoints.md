@@ -4,7 +4,7 @@
 
 ## GET List tasks
 
-```
+```cmd
 https://api.techwriter.xyz/task/tasks
 ```
 This endpoint returns details of all technical writer tasks.
@@ -35,5 +35,14 @@ Here is an example response returned on success:
 ```
 
 **Note:** The `status` field represents the status of the task: **open**, **in progress**, or **complete**. In the current version, you can update the task status manually using our website. Later we'll add an endpoint allowing to update tasks including their statuses.
+
+If your request is unauthorized or the API key is missing or invalid, the API will return a 401 error:
+
+    ```json
+    {
+      "message": "Unauthorized, API key missing or invalid.",
+      "code": "401"
+    }
+    ```
 
 ## POST Add a new task
